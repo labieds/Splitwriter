@@ -45,6 +45,11 @@ If you want a small notebook-like tool for novels, scripts, or journals, Splitwr
 - **Text Board**  
   Preset-based text editor for comfortable writing. Switch between headline/body/accent/emphasis presets for different parts of your manuscript.
 
+- **Echo View (Cinematic Preview)**
+  Instantly preview the selected text in a clean, full-screen, visual-novel-style layout.
+  Echo View can display your text alone against a dark background, or combine it with the current reference image to create a scene-like presentation.
+  Perfect for reviewing dialogue, checking flow, practicing readings, or preparing YouTube/lecture scripts.
+
 - **Image Board**  
   An image viewer for description and reference. Images are **referenced by path only** and are not embedded into the `.swon` file.
 
