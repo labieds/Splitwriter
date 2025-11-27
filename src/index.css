@@ -1,0 +1,365 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Preset tokens (H/B/A/E) ===== */
+:root{
+  /* Headline */
+  --type-h-family: system-ui;
+  --type-h-size: 22px;
+  --type-h-line: 32px;
+  --type-h-style: normal;
+
+  /* Body */
+  --type-b-family: system-ui;
+  --type-b-size: 16px;
+  --type-b-line: 24px;
+  --type-b-style: normal;
+
+  /* Accent */
+  --type-a-family: system-ui;
+  --type-a-size: 16px;
+  --type-a-line: 24px;
+  --type-a-style: normal;
+
+  /* Emphasis(etc) */
+  --type-e-family: system-ui;
+  --type-e-size: 16px;
+  --type-e-line: 24px;
+  --type-e-style: normal;
+}
+
+/* 프리셋 클래스 매핑 — !important 쓰지 마! (B/I와 충돌 방지) */
+[data-sw-paragraph].sw-preset-1{
+  font-family: var(--type-h-family);
+  font-size:   var(--type-h-size);
+  line-height: var(--type-h-line);
+  font-style:  var(--type-h-style);
+}
+[data-sw-paragraph].sw-preset-2{
+  font-family: var(--type-b-family);
+  font-size:   var(--type-b-size);
+  line-height: var(--type-b-line);
+  font-style:  var(--type-b-style);
+}
+[data-sw-paragraph].sw-preset-3{
+  font-family: var(--type-a-family);
+  font-size:   var(--type-a-size);
+  line-height: var(--type-a-line);
+  font-style:  var(--type-a-style);
+}
+[data-sw-paragraph].sw-preset-4{
+  font-family: var(--type-e-family);
+  font-size:   var(--type-e-size);
+  line-height: var(--type-e-line);
+  font-style:  var(--type-e-style);
+}
+
+/* ===== Design Tokens (Dark default) ===== */
+:root,
+[data-theme="dark"]{
+  /* Core */
+  --bg:#1e2125; --panel:#262a2f; --panel-bg: var(--panel);
+  --topbar:#131416; --topbar-divider:rgba(158,162,170,.10);
+  --text-1:#9ea2aa; --text-2:#828a96; --text-muted:#656d78;
+  --divider:rgba(158,162,170,.18); --border:rgba(158,162,170,.08);
+  --hover:rgba(158,162,170,.08); --btn-bg:rgba(158,162,170,.05);
+  --icon:#aab1ba; --icon-pressed:var(--text-1); --icon-disabled:rgba(158,162,170,.45);
+  --accent:#6aa8ff;
+  --text-strong: #d7dde8;       /* titlebar, modal 제목 등 */
+  --text-soft:   #b0b7c4;       /* 서브텍스트 */
+  --titlebar-text: var(--text-strong);
+  --prefs-text-main: var(--text-strong);
+  --prefs-text-sub:  var(--text-2);
+
+  /* Toolbar icon filters (dark) */
+  --tb-icon-filter: brightness(0.5) saturate(0.90);
+  --tb-icon-filter-hover: brightness(1.18) saturate(1.02);
+  --tb-icon-filter-active: none;
+  --tb-icon-opacity: 0.9;
+  --input-bg: rgba(0,0,0,0.35);
+  --input-border: rgba(255,255,255,0.16);
+
+  /* Sidebar (dark) */
+  --sb-bg: rgba(10,14,24,.80);
+  --sb-menu-bg: rgba(12,18,30,.82);
+  --sb-text: rgba(210,220,236,.96);
+  --sb-border: rgba(90,130,200,.28);
+  --sb-border-strong: rgba(90,130,200,.40);
+  --sb-hover: rgba(70,120,200,.14);
+  --sb-selected: rgba(70,120,200,.20);
+  --sb-root-row: rgba(255,255,255,.035);
+  --sb-btn-bg: rgba(18,24,36,.18);
+  --sb-btn-bg-hover: rgba(70,120,200,.18);
+  --sb-backdrop: rgba(5,8,14,.55);
+  --sb-dirty-dot: #ff8a8a;
+
+  /* Scrollbar defaults */
+  --scrollbar-size: 10px; --scrollbar-radius: 8px;
+  --scrollbar-track: color-mix(in srgb, var(--panel) 86%, transparent);
+  --scrollbar-thumb: color-mix(in srgb, #9ea2aa 38%, transparent);
+  --scrollbar-thumb-hover: color-mix(in srgb, #cfd6df 52%, transparent);
+  --scrollbar-thumb-active: color-mix(in srgb, var(--accent) 60%, #9ea2aa 40%);
+}
+
+/* ===== Light Theme Override (softer) ===== */
+[data-theme="light"] {
+  color-scheme: light;
+
+  /* 메인 배경 / 패널 */
+  --bg: #eef1f6;       
+  --panel: #f7f8fc;  
+  --panel-bg: var(--panel);
+  --topbar: #f5f6fb;
+  --topbar-divider: rgba(15, 23, 42, 0.06);
+
+  /* 텍스트 톤 */
+  --text-1: #151b26;   
+  --text-2: #394357;
+  --text-muted: #6b7485;
+
+  /* 프리퍼런스 / 타이틀바에서 쓰는 토큰도 같이 맞춰주자 */
+  --prefs-text-main: var(--text-1);
+  --prefs-text-sub: var(--text-muted);
+  --titlebar-text: var(--text-2);
+
+  /* 테두리 / 구분선 / 호버 */
+  --divider: rgba(15, 23, 42, 0.08);
+  --border: rgba(15, 23, 42, 0.10);
+  --hover: rgba(15, 23, 42, 0.04);
+  --btn-bg: rgba(15, 23, 42, 0.03);
+
+  /* 아이콘 컬러 계열 */
+  --icon: #4a5770;
+  --icon-pressed: #1f2937;
+  --icon-disabled: rgba(15, 23, 42, 0.38);
+  --input-bg: rgba(255,255,255,0.96);
+  --input-border: rgba(15,23,42,0.10);
+
+  /* 액센트는 살짝만 눌러서 눈부심 줄이기 */
+  --accent: #2f6eea;
+
+  /* Toolbar icon filters (light) */
+  --tb-icon-filter: brightness(0.75) invert(1) saturate(0.9);
+  --tb-icon-filter-hover: brightness(0.65) invert(1) saturate(1.05);
+  --tb-icon-filter-active: brightness(0.70) invert(1) saturate(1.05);
+  --tb-icon-opacity: 0.95;
+
+  /* Sidebar (light) – 살짝 어두운 그레이+블루 톤 */
+  --sb-bg:#b2b7c2;
+  --sb-text:var(--text-1);
+  --sb-border:rgba(15,23,42,0.16);
+  --sb-border-strong:rgba(15,23,42,0.32);
+  --sb-hover:rgba(15,23,42,0.06);
+  --sb-selected:rgba(15,23,42,0.10);
+  --sb-root-row:rgba(15,23,42,0.05);
+  --sb-btn-bg:rgba(255,255,255,0.12);
+  --sb-btn-bg-hover:rgba(255,255,255,0.22);
+  --sb-dirty-dot:#ff5f5f;
+  --sb-backdrop:rgba(15,23,42,0.18);
+  --sb-menu-bg:#f4f6fc;
+}
+
+/* ===== Base ===== */
+html,body,#root{
+  height:100%;
+  background:var(--bg);
+  color:var(--text-1);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  text-rendering:optimizeLegibility;
+}
+[data-placeholder]:empty::before{color:var(--text-muted);}
+b,strong{font-weight:600;}
+
+/* ===== Buttons ===== */
+.tb-iconbtn{
+  transition:background .12s,border-color .12s,filter .12s,opacity .12s;
+}
+
+/* 마스크 기반 아이콘 (BoardHandle 등) */
+.sw-icon-mask{
+  display:block;
+  background-color: var(--icon);
+  -webkit-mask-repeat:no-repeat;
+          mask-repeat:no-repeat;
+  -webkit-mask-position:center;
+          mask-position:center;
+  -webkit-mask-size:contain;
+          mask-size:contain;
+  opacity: var(--tb-icon-opacity);
+  transition: background-color .12s, opacity .12s;
+}
+
+.tb-iconbtn:hover .sw-icon-mask{
+  background-color: var(--icon-pressed);
+  opacity: 1;
+}
+.tb-iconbtn.is-active .sw-icon-mask{
+  background-color: var(--icon-pressed);
+  opacity: 1;
+}
+.tb-iconbtn[disabled] .sw-icon-mask{
+  background-color: var(--icon-disabled);
+  opacity: 0.6;
+}
+
+/* 공통 아이콘 이미지 (툴바 + 기타 아이콘) */
+.tb-iconbtn img,
+.sw-icon{
+  filter: var(--tb-icon-filter);
+  opacity: var(--tb-icon-opacity);
+  transition: filter .12s, opacity .12s;
+}
+
+.tb-iconbtn:hover img{
+  filter: var(--tb-icon-filter-hover);
+  opacity: 1;
+}
+.tb-iconbtn.is-active img{
+  filter: var(--tb-icon-filter-active);
+  opacity: 1;
+}
+.tb-iconbtn.is-active:hover img{
+  filter: var(--tb-icon-filter-hover);
+}
+
+/* Board handle 버튼 (양쪽 테마 공통) */
+.sw-board-handle{
+  position:absolute;
+  left:11px;
+  top:3px;
+  width:24px;
+  height:24px;
+  padding:4px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:4px;
+  border:1px solid color-mix(in srgb, var(--border) 80%, transparent);
+  background:color-mix(in srgb, var(--panel-bg) 40%, transparent);
+  backdrop-filter:blur(4px);
+  cursor:grab;
+  z-index:5;
+}
+.sw-board-handle:active{
+  cursor:grabbing;
+}
+
+/* ===== ContextMenu ===== */
+.ctxmenu-panel{
+  background: var(--panel-bg,#15171c);
+  border: 1px solid var(--border,#2a2e35);
+  border-radius: 12px;
+  padding: 6px;
+
+  /* 예전보다 덜 번지고, 살짝만 띄워주는 그림자 */
+  box-shadow:
+    0 10px 24px rgba(0,0,0,.28),
+    0 0 0 1px color-mix(in srgb, #000 10%, transparent);
+
+  /* 배경 블러도 조금만 줄여서 뭉치는 느낌 완화 */
+  backdrop-filter: blur(3px);
+}
+.ctxmenu-item{width:100%;display:flex;align-items:center;gap:8px;border:1px solid transparent;border-radius:8px;
+  background:transparent;padding:9px 12px;color:var(--text-1);cursor:pointer;user-select:none;font-size:13px;line-height:1.2;outline:none;}
+.ctxmenu-item.is-active,.ctxmenu-item:hover{background:rgba(120,90,220,.16);border-color:rgba(120,90,220,.38);}
+.ctxmenu-item:focus,.ctxmenu-item:active{outline:none;box-shadow:none;}
+.ctxmenu-item.is-disabled{opacity:.5;cursor:not-allowed;}
+.ctxmenu-label{flex:1;text-align:left;}
+
+/* ===== Preferences Modal ===== */
+.pref-root{ pointer-events:none; }
+.pref-root .pref-backdrop{ background:rgba(0,0,0,.4); pointer-events:none; }
+.pref-root .pref-panel{
+  pointer-events:auto; background:var(--panel-bg);
+  border:1px solid var(--border);
+  box-shadow:0 12px 32px rgba(0,0,0,.45), 0 2px 6px rgba(0,0,0,.3);
+  border-radius:12px;
+}
+
+/* ===== Window Chrome ===== */
+[data-tauri-drag-region]{ -webkit-app-region: drag; }
+.no-drag, .tauri-no-drag{ -webkit-app-region: no-drag; }
+.titlebar { position: relative; z-index: 20; pointer-events: auto; }
+
+/* ===== About Logo ===== */
+.about-logo {
+  display: block;
+  width: 480px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 12px;
+}
+
+/* ===== Scrollbar (scoped utilities) ===== */
+.scroll-stable-gutter{ scrollbar-gutter: stable; }
+*{ scrollbar-width:thin; scrollbar-color: var(--scrollbar-thumb) transparent; }
+@supports selector(::-webkit-scrollbar){
+  *::-webkit-scrollbar{ width:var(--scrollbar-size); height:var(--scrollbar-size); }
+  *::-webkit-scrollbar-track{ background:transparent; }
+  *::-webkit-scrollbar-thumb{
+    background-color:var(--scrollbar-thumb); border-radius:var(--scrollbar-radius);
+    border:2px solid transparent; background-clip:padding-box;
+  }
+  *::-webkit-scrollbar-thumb:hover{ background-color:var(--scrollbar-thumb-hover); }
+  *::-webkit-scrollbar-thumb:active{ background-color:var(--scrollbar-thumb-active); }
+  *::-webkit-scrollbar-corner{ background:transparent; }
+  *::-webkit-scrollbar-button{ display:none; width:0; height:0; }
+}
+@media (forced-colors: active){
+  *{ scrollbar-color:auto; scrollbar-width:auto; }
+}
+.scrollbar-quiet{ scrollbar-width:thin; scrollbar-color: color-mix(in srgb, var(--scrollbar-thumb) 70%, transparent) transparent; }
+@supports selector(::-webkit-scrollbar){
+  .scrollbar-quiet::-webkit-scrollbar-thumb{ background-color: color-mix(in srgb, var(--scrollbar-thumb) 70%, transparent); }
+}
+.scrollbar-trackline::-webkit-scrollbar-track{
+  background: linear-gradient(to right, transparent, color-mix(in srgb, #ffffff 6%, transparent) 4%, transparent 8%);
+}
+
+/* ===== Editor reset ===== */
+[data-sw-paragraph],
+h1[data-sw-paragraph], h2[data-sw-paragraph], h3[data-sw-paragraph],
+h4[data-sw-paragraph], h5[data-sw-paragraph], h6[data-sw-paragraph]{
+  margin:0; font:inherit; line-height:inherit; text-align:inherit;
+  font-synthesis:weight style; text-rendering:optimizeLegibility;
+}
+span[data-sw-selmk], span[data-sw-mk]{ display:inline-block; width:0; height:0; overflow:hidden; }
+
+/* ===== Boards: outline/focus ===== */
+[data-role="imageboard"],
+[data-role="textboard"] {
+  outline: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Textboard focus ring – theme별로 살짝만 표시 */
+[data-theme="dark"] [data-role="textboard"]:focus-within,
+[data-theme="dark"] [data-role="textboard"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--accent) 55%, #ffffff 20%);
+}
+
+[data-theme="light"] [data-role="textboard"]:focus-within,
+[data-theme="light"] [data-role="textboard"]:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 1px rgba(15,23,42,0.14);
+}
+
+/* --- Split handle: don't behave like selectable text --- */
+.sw-board-handle,
+.sw-board-handle * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* 전역 ::selection 이 accent 색을 써도, 핸들 안은 투명하게 */
+.sw-board-handle::selection,
+.sw-board-handle *::selection {
+  background: transparent;
+  color: inherit;
+}
