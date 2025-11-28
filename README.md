@@ -1,4 +1,11 @@
-<img width="300" height="400" alt="Logo_Light_Splitwriter" src="https://github.com/user-attachments/assets/14371b15-b59f-4eb3-91de-7d391a5de180" />
+<p align="center">
+  <img
+    width="300"
+    height="400"
+    alt="Logo_Light_Splitwriter"
+    src="https://github.com/user-attachments/assets/14371b15-b59f-4eb3-91de-7d391a5de180"
+  />
+</p>
 
 # Splitwriter
 
