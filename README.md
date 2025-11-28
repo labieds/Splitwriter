@@ -1,6 +1,4 @@
-
-<img width="424" height="600" alt="Logo_Light_Splitwriter" src="https://github.com/user-attachments/assets/441a8987-bfa8-4a25-aba7-06664578b9e6" />
-
+<img width="300" height="400" alt="Logo_Light_Splitwriter" src="https://github.com/user-attachments/assets/14371b15-b59f-4eb3-91de-7d391a5de180" />
 
 # Splitwriter
 
