@@ -1,3 +1,6 @@
+
+<img width="540" height="720" alt="Logo_Light_Splitwriter" src="https://github.com/user-attachments/assets/cdbac363-115b-4072-9019-11d8fa150bab" />
+
 # Splitwriter
 
 _For all creators — past, present, and future._
