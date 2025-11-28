@@ -34,6 +34,8 @@ This program exists for one purpose: **to support comfortable, uninterrupted wri
 
 If you want a small notebook-like tool for novels, scripts, or journals, Splitwriter is for you.
 
+<img width="1100" height="720" alt="screenshot" src="https://github.com/user-attachments/assets/20a7cde9-c3dd-4381-b903-96dc76e8e911" />
+
 ---
 
 ## Key Features
